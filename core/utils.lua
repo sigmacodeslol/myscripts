@@ -6,7 +6,9 @@ function utilslib.loadgithub(file, isTrusted, repo_loc) -- repo_loc is repositor
     if repo_loc == false then
         repo_loc = "sigmacodeslol/myscripts/refs/heads/master/"
     end
-    return loadstring(game:HttpGet("https://raw.githubusercontent.com/"..repo_loc..file), isTrusted)()
+    tohttpget = "https://raw.githubusercontent.com/"..repo_loc..file
+    print('test  '..tohttpget)
+    return loadstring(game:HttpGet(tohttpget), isTrusted)()
 end
 
 return utilslib
